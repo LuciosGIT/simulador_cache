@@ -1,0 +1,19 @@
+﻿comparacao,cenario_a,cenario_b,n,diferenca_media_pp,ic95_inferior_pp,ic95_superior_pp,fracao_a_maior,fracao_empates,metodo
+01_politicas_fixas: FIFO - LRU,C001,C002,100,-1.2544999999999997,-1.2740050000000003,-1.2358999999999998,0.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+01_politicas_fixas: LFU - LRU,C003,C002,100,0.18120000000000014,0.16679999999999987,0.19569999999999918,1.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+01_politicas_fixas: Random - LRU,C004,C002,100,-1.1731,-1.2072025000000006,-1.1389975000000003,0.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+01_politicas_fixas: LRFU - LRU,C005,C002,100,0.006499999999999728,0.0037999999999993594,0.009199999999999542,0.54,0.29,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_phase: FIFO - LRU,C062,C063,100,-11.3135,-11.351599999999998,-11.273797499999999,0.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_phase: LFU - LRU,C064,C063,100,-1.5316999999999998,-1.5707999999999993,-1.493,0.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_phase: Random - LRU,C065,C063,100,-11.325899999999999,-11.4007025,-11.2485,0.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_phase: LRFU - LRU,C066,C063,100,1.7202999999999995,1.6846000000000005,1.7551999999999992,1.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_pollution: FIFO - LRU,C067,C068,100,-6.447800000000001,-6.4914999999999985,-6.403097499999999,0.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_pollution: LFU - LRU,C069,C068,100,13.694199999999999,13.646595000000001,13.7411025,1.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_pollution: Random - LRU,C070,C068,100,-6.4385,-6.512507500000001,-6.364092499999999,0.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_pollution: LRFU - LRU,C071,C068,100,13.691699999999999,13.644594999999999,13.7398,1.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_random: FIFO - LRU,C072,C073,100,-0.0006000000000000059,-0.0023000000000000047,0.001,0.18,0.57,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_random: LFU - LRU,C074,C073,100,-0.002000000000000003,-0.008500000000000004,0.004502499999999978,0.42,0.12,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_random: Random - LRU,C075,C073,100,-0.015700000000000013,-0.029000000000000012,-0.0022000000000000114,0.4,0.06,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+03_robustez_random: LRFU - LRU,C076,C073,100,9.99999999999994e-05,-0.0003999999999999984,0.0006999999999999949,0.02,0.96,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+FIR LRU: amostra - canal,C106,C104,100,9.078755469129792,9.078755469129792,9.078755469129792,1.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla
+FIR LRFU: amostra - canal,C107,C105,100,9.078755469129792,9.078755469129792,9.078755469129792,1.0,0.0,bootstrap pareado percentil 5000; exploratorio sem correcao multipla

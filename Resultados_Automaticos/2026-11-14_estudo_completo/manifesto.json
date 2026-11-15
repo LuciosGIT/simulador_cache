@@ -1,0 +1,1905 @@
+{
+  "created_at": "2026-11-14T00:02:57.713474-03:00",
+  "python": "3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "config": {
+    "runs": 100,
+    "accesses": 10000,
+    "seed": 2026,
+    "scenarios": [
+      {
+        "id": "C001",
+        "experiment": "01_politicas_fixas",
+        "label": "FIFO",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C002",
+        "experiment": "01_politicas_fixas",
+        "label": "LRU",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C003",
+        "experiment": "01_politicas_fixas",
+        "label": "LFU",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C004",
+        "experiment": "01_politicas_fixas",
+        "label": "Random",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C005",
+        "experiment": "01_politicas_fixas",
+        "label": "LRFU",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C006",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 2 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 2,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C007",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 4 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 4,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C008",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 8 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 8,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C009",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 16 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 16,
+        "decay": 0.015625
+      },
+      {
+        "id": "C010",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 32 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 32,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 32,
+        "decay": 0.015625
+      },
+      {
+        "id": "C011",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 64 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 64,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 64,
+        "decay": 0.015625
+      },
+      {
+        "id": "C012",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 128 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 128,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 128,
+        "decay": 0.015625
+      },
+      {
+        "id": "C013",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 256 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 256,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 256,
+        "decay": 0.015625
+      },
+      {
+        "id": "C014",
+        "experiment": "01b_politicas_blocos",
+        "label": "FIFO; 512 B",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 512,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 512,
+        "decay": 0.015625
+      },
+      {
+        "id": "C015",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 2 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 2,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C016",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 4 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 4,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C017",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 8 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 8,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C018",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 16 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 16,
+        "decay": 0.015625
+      },
+      {
+        "id": "C019",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 32 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 32,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 32,
+        "decay": 0.015625
+      },
+      {
+        "id": "C020",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 64 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 64,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 64,
+        "decay": 0.015625
+      },
+      {
+        "id": "C021",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 128 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 128,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 128,
+        "decay": 0.015625
+      },
+      {
+        "id": "C022",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 256 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 256,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 256,
+        "decay": 0.015625
+      },
+      {
+        "id": "C023",
+        "experiment": "01b_politicas_blocos",
+        "label": "LRU; 512 B",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 512,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 512,
+        "decay": 0.015625
+      },
+      {
+        "id": "C024",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 2 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 2,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C025",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 4 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 4,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C026",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 8 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 8,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C027",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 16 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 16,
+        "decay": 0.015625
+      },
+      {
+        "id": "C028",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 32 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 32,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 32,
+        "decay": 0.015625
+      },
+      {
+        "id": "C029",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 64 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 64,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 64,
+        "decay": 0.015625
+      },
+      {
+        "id": "C030",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 128 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 128,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 128,
+        "decay": 0.015625
+      },
+      {
+        "id": "C031",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 256 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 256,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 256,
+        "decay": 0.015625
+      },
+      {
+        "id": "C032",
+        "experiment": "01b_politicas_blocos",
+        "label": "LFU; 512 B",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 512,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 512,
+        "decay": 0.015625
+      },
+      {
+        "id": "C033",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 2 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 2,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C034",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 4 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 4,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C035",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 8 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 8,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C036",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 16 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 16,
+        "decay": 0.015625
+      },
+      {
+        "id": "C037",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 32 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 32,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 32,
+        "decay": 0.015625
+      },
+      {
+        "id": "C038",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 64 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 64,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 64,
+        "decay": 0.015625
+      },
+      {
+        "id": "C039",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 128 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 128,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 128,
+        "decay": 0.015625
+      },
+      {
+        "id": "C040",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 256 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 256,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 256,
+        "decay": 0.015625
+      },
+      {
+        "id": "C041",
+        "experiment": "01b_politicas_blocos",
+        "label": "Random; 512 B",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 512,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 512,
+        "decay": 0.015625
+      },
+      {
+        "id": "C042",
+        "experiment": "02_perfis",
+        "label": "Aleatório",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C043",
+        "experiment": "02_perfis",
+        "label": "Base",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C044",
+        "experiment": "02_perfis",
+        "label": "Temporal alta",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.7,
+          0.1,
+          0.1
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C045",
+        "experiment": "02_perfis",
+        "label": "Espacial alta",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.1,
+          0.7,
+          0.1
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C046",
+        "experiment": "02_perfis",
+        "label": "Regiões quentes altas",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.1,
+          0.1,
+          0.7
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C047",
+        "experiment": "02_isolada_0",
+        "label": "0.0",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0,
+          0.0,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C048",
+        "experiment": "02_isolada_0",
+        "label": "0.2",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.0,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0.2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C049",
+        "experiment": "02_isolada_0",
+        "label": "0.4",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.4,
+          0.0,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0.4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C050",
+        "experiment": "02_isolada_0",
+        "label": "0.6",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.6,
+          0.0,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0.6,
+        "decay": 0.015625
+      },
+      {
+        "id": "C051",
+        "experiment": "02_isolada_0",
+        "label": "0.8",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.8,
+          0.0,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0.8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C052",
+        "experiment": "02_isolada_1",
+        "label": "0.0",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C053",
+        "experiment": "02_isolada_1",
+        "label": "0.2",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.2,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0.2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C054",
+        "experiment": "02_isolada_1",
+        "label": "0.4",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.4,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0.4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C055",
+        "experiment": "02_isolada_1",
+        "label": "0.6",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.6,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0.6,
+        "decay": 0.015625
+      },
+      {
+        "id": "C056",
+        "experiment": "02_isolada_1",
+        "label": "0.8",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.8,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0.8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C057",
+        "experiment": "02_isolada_2",
+        "label": "0.0",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.0,
+          0
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C058",
+        "experiment": "02_isolada_2",
+        "label": "0.2",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.0,
+          0.2
+        ],
+        "workload": "synthetic",
+        "value": 0.2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C059",
+        "experiment": "02_isolada_2",
+        "label": "0.4",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.0,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 0.4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C060",
+        "experiment": "02_isolada_2",
+        "label": "0.6",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.0,
+          0.6
+        ],
+        "workload": "synthetic",
+        "value": 0.6,
+        "decay": 0.015625
+      },
+      {
+        "id": "C061",
+        "experiment": "02_isolada_2",
+        "label": "0.8",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.0,
+          0.8
+        ],
+        "workload": "synthetic",
+        "value": 0.8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C062",
+        "experiment": "03_robustez_phase",
+        "label": "FIFO",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C063",
+        "experiment": "03_robustez_phase",
+        "label": "LRU",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C064",
+        "experiment": "03_robustez_phase",
+        "label": "LFU",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C065",
+        "experiment": "03_robustez_phase",
+        "label": "Random",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C066",
+        "experiment": "03_robustez_phase",
+        "label": "LRFU",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C067",
+        "experiment": "03_robustez_pollution",
+        "label": "FIFO",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "pollution",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C068",
+        "experiment": "03_robustez_pollution",
+        "label": "LRU",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "pollution",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C069",
+        "experiment": "03_robustez_pollution",
+        "label": "LFU",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "pollution",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C070",
+        "experiment": "03_robustez_pollution",
+        "label": "Random",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "pollution",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C071",
+        "experiment": "03_robustez_pollution",
+        "label": "LRFU",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "pollution",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C072",
+        "experiment": "03_robustez_random",
+        "label": "FIFO",
+        "policy": "FIFO",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "random",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C073",
+        "experiment": "03_robustez_random",
+        "label": "LRU",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "random",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C074",
+        "experiment": "03_robustez_random",
+        "label": "LFU",
+        "policy": "LFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "random",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C075",
+        "experiment": "03_robustez_random",
+        "label": "Random",
+        "policy": "Random",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "random",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C076",
+        "experiment": "03_robustez_random",
+        "label": "LRFU",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "random",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C077",
+        "experiment": "04_linhas",
+        "label": "64",
+        "policy": "LRU",
+        "cache": 1024,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 64,
+        "decay": 0.015625
+      },
+      {
+        "id": "C078",
+        "experiment": "04_linhas",
+        "label": "128",
+        "policy": "LRU",
+        "cache": 2048,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 128,
+        "decay": 0.015625
+      },
+      {
+        "id": "C079",
+        "experiment": "04_linhas",
+        "label": "256",
+        "policy": "LRU",
+        "cache": 4096,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 256,
+        "decay": 0.015625
+      },
+      {
+        "id": "C080",
+        "experiment": "04_linhas",
+        "label": "512",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 512,
+        "decay": 0.015625
+      },
+      {
+        "id": "C081",
+        "experiment": "04_linhas",
+        "label": "1024",
+        "policy": "LRU",
+        "cache": 16384,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 1024,
+        "decay": 0.015625
+      },
+      {
+        "id": "C082",
+        "experiment": "04_linhas",
+        "label": "2048",
+        "policy": "LRU",
+        "cache": 32768,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 2048,
+        "decay": 0.015625
+      },
+      {
+        "id": "C083",
+        "experiment": "04_associatividade",
+        "label": "1",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 1,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 1,
+        "decay": 0.015625
+      },
+      {
+        "id": "C084",
+        "experiment": "04_associatividade",
+        "label": "2",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 2,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C085",
+        "experiment": "04_associatividade",
+        "label": "4",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 4,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C086",
+        "experiment": "04_associatividade",
+        "label": "8",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 8,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C087",
+        "experiment": "04_associatividade",
+        "label": "16",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 16,
+        "decay": 0.015625
+      },
+      {
+        "id": "C088",
+        "experiment": "04_associatividade",
+        "label": "32",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 32,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 32,
+        "decay": 0.015625
+      },
+      {
+        "id": "C089",
+        "experiment": "04_associatividade",
+        "label": "64",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 64,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 64,
+        "decay": 0.015625
+      },
+      {
+        "id": "C090",
+        "experiment": "04_associatividade",
+        "label": "128",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 128,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 128,
+        "decay": 0.015625
+      },
+      {
+        "id": "C091",
+        "experiment": "04_associatividade",
+        "label": "256",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 256,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 256,
+        "decay": 0.015625
+      },
+      {
+        "id": "C092",
+        "experiment": "04_associatividade",
+        "label": "512",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 512,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 512,
+        "decay": 0.015625
+      },
+      {
+        "id": "C093",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "2",
+        "policy": "LRU",
+        "cache": 1024,
+        "block": 2,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 2,
+        "decay": 0.015625
+      },
+      {
+        "id": "C094",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "4",
+        "policy": "LRU",
+        "cache": 2048,
+        "block": 4,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 4,
+        "decay": 0.015625
+      },
+      {
+        "id": "C095",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "8",
+        "policy": "LRU",
+        "cache": 4096,
+        "block": 8,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 8,
+        "decay": 0.015625
+      },
+      {
+        "id": "C096",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "16",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 16,
+        "decay": 0.015625
+      },
+      {
+        "id": "C097",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "32",
+        "policy": "LRU",
+        "cache": 16384,
+        "block": 32,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 32,
+        "decay": 0.015625
+      },
+      {
+        "id": "C098",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "64",
+        "policy": "LRU",
+        "cache": 32768,
+        "block": 64,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 64,
+        "decay": 0.015625
+      },
+      {
+        "id": "C099",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "128",
+        "policy": "LRU",
+        "cache": 65536,
+        "block": 128,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 128,
+        "decay": 0.015625
+      },
+      {
+        "id": "C100",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "256",
+        "policy": "LRU",
+        "cache": 131072,
+        "block": 256,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 256,
+        "decay": 0.015625
+      },
+      {
+        "id": "C101",
+        "experiment": "04_bloco_linhas_fixas",
+        "label": "512",
+        "policy": "LRU",
+        "cache": 262144,
+        "block": 512,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 512,
+        "decay": 0.015625
+      },
+      {
+        "id": "C102",
+        "experiment": "06_realista_aleatorio",
+        "label": "Realista",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C103",
+        "experiment": "06_realista_aleatorio",
+        "label": "Aleatório",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "workload": "synthetic",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C104",
+        "experiment": "07_filtro_fir",
+        "label": "Canal externo; LRU",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "fir_canal",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C105",
+        "experiment": "07_filtro_fir",
+        "label": "Canal externo; LRFU",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "fir_canal",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C106",
+        "experiment": "07_filtro_fir",
+        "label": "Amostra externa; LRU",
+        "policy": "LRU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "fir_amostra",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C107",
+        "experiment": "07_filtro_fir",
+        "label": "Amostra externa; LRFU",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "fir_amostra",
+        "value": 0,
+        "decay": 0.015625
+      },
+      {
+        "id": "C108",
+        "experiment": "08_sensibilidade_lrfu",
+        "label": "8",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 8,
+        "decay": 0.125
+      },
+      {
+        "id": "C109",
+        "experiment": "08_sensibilidade_lrfu",
+        "label": "32",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 32,
+        "decay": 0.03125
+      },
+      {
+        "id": "C110",
+        "experiment": "08_sensibilidade_lrfu",
+        "label": "128",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 128,
+        "decay": 0.0078125
+      },
+      {
+        "id": "C111",
+        "experiment": "08_sensibilidade_lrfu",
+        "label": "512",
+        "policy": "LRFU",
+        "cache": 8192,
+        "block": 16,
+        "ways": 16,
+        "probs": [
+          0.2,
+          0.2,
+          0.4
+        ],
+        "workload": "phase",
+        "value": 512,
+        "decay": 0.001953125
+      }
+    ],
+    "source_sha256": {
+      "cache_core.py": "d46f8f714d130daca5ae15536e0c3beab72758e59637eab39d86ce12b9830d48",
+      "cache_visualizacao.py": "7e513a24f1fa80a17a9adf448f6c32219ef80805c7a3a9bef716b809dd1ade80",
+      "experimentos_completos.py": "5c5eb259d65b6ef88200c96a7638a329e1307d20f92c7d6317477c95663a3580"
+    }
+  }
+}

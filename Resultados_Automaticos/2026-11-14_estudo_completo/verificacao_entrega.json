@@ -1,0 +1,14 @@
+{
+  "status": "aprovado",
+  "cenarios": 111,
+  "simulacoes_principais": 11100,
+  "simulacoes_3c": 400,
+  "referencias_principais": 133329600,
+  "referencias_3c": 4000000,
+  "figuras": 21,
+  "comparacoes_pareadas": 18,
+  "outliers": 192,
+  "verificacoes": "contadores, sementes, configurações, médias, DP, variâncias, quartis, extremos, outliers, bootstrap pareado, totais 3C, hashes, imagens e links",
+  "testes_unitarios": "13 testes aprovados; sem skips",
+  "pdf_bytes": 2199149
+}

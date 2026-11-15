@@ -1,0 +1,10 @@
+{
+  "status": "concluido",
+  "completed_at": "2026-11-14T00:23:29.236832-03:00",
+  "cenarios": 111,
+  "simulacoes": 11100,
+  "simulacoes_3c": 400,
+  "referencias": 133329600,
+  "referencias_3c": 4000000,
+  "segundos_esta_execucao": 66.6202432999853
+}

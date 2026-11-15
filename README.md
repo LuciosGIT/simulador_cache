@@ -1,147 +1,62 @@
-# simulador_cache
-Simulador de Memória Cache com Interface Gráfica (GUI)
-Claro! Aqui está a versão revisada e formatada para o arquivo `README.md` de um repositório no GitHub. A linguagem foi ajustada para o estilo típico de documentação pública, mantendo clareza, objetividade e boa organização:
+# Simulador de memória cache — estudo completo
 
----
+Projeto de Organização de Computadores (POLI/UPE). Cobre as seis atividades do professor e acrescenta experimentos de adaptação, análise pareada, classificação de misses e localidade em filtro FIR multicanal.
 
-# Simulador de Memória Cache com Interface Gráfica (GUI)
+## Entrega principal
 
-## 1. Apresentação
+- [Relatório final](Relatorio_Final_Organizacao_de_Computadores.md) e versão PDF com o mesmo nome.
+- [Resultados completos de 14/11/2026](Resultados_Automaticos/2026-11-14_estudo_completo/Relatorio_Completo.md).
+- [Guia para apresentação](GUIA_APRESENTACAO.md).
+- Dados individuais, estatísticas, outliers, comparações pareadas, classificação 3C, manifesto e figuras na pasta da execução completa.
 
-Este simulador tem como objetivo didático auxiliar no estudo do comportamento de memórias cache em sistemas computacionais. Por meio de uma interface gráfica interativa (baseada em **Dear PyGui**), o usuário pode configurar diversos parâmetros da arquitetura de cache e do padrão de acesso à memória, observando o impacto nas taxas de acerto (*hit rate*) sob diferentes políticas de substituição.
+A pasta `2026-11-14_validacao_rapida` contém somente uma verificação dßo fluxo com três repetições. Use a pasta `2026-11-14_estudo_completo` para os resultados finais com 100 repetições. As pastas de 10 e 13/11 preservam o estudo anterior.
 
-## 2. Funcionalidades Principais
+## Instalação e uso
 
-* Simulação de acessos à memória com padrões realistas baseados em:
+Use Python 3.12 (versão validada nesta entrega). Em PowerShell, na pasta do projeto:
 
-  * Localidade temporal
-  * Localidade espacial
-  * Regiões quentes de memória
-* Implementação das principais políticas de substituição:
-
-  * **FIFO** (First-In First-Out)
-  * **LRU** (Least Recently Used)
-  * **LFU** (Least Frequently Used)
-  * **Random**
-* Geração de **mapa de calor (heatmap)** para visualização da frequência de acesso por bloco de memória ao longo do tempo **(desabilitado por erro no código)**.
-* Execução de **simulações Monte Carlo** para análise estatística da taxa de acerto.
-* Exibição dos resultados diretamente na interface, incluindo média e desvio padrão da taxa de acerto.
-
-## 3. Parâmetros Ajustáveis pelo Usuário
-
-O simulador permite a configuração dos seguintes parâmetros:
-
-* Tamanho da memória principal (número de endereços)
-* Quantidade de acessos simulados
-* Número total de linhas da cache
-* Grau de associatividade (linhas por conjunto)
-* Tamanho do bloco (endereços por bloco)
-* Número de regiões quentes (áreas mais frequentemente acessadas)
-* Probabilidades associadas ao padrão de acesso:
-
-  * Localidade temporal (repetição do último acesso)
-  * Localidade espacial (endereços próximos ao anterior)
-  * Regiões quentes (foco em áreas específicas)
-* Política de substituição (FIFO, LRU, LFU, Random)
-* Número de simulações (para Monte Carlo)
-
-## 4. Geração do Padrão de Acesso
-
-Os endereços são gerados com base em um modelo probabilístico que busca simular o comportamento real de programas:
-
-* Uma fração repete o endereço anterior (*localidade temporal*)
-* Outra fração acessa endereços vizinhos (*localidade espacial*)
-* Outra parte concentra acessos em **regiões quentes**
-* O restante realiza acessos aleatórios
-
-## 5. Políticas de Substituição
-
-Cada política é implementada com estruturas de dados apropriadas que refletem seu comportamento esperado:
-
-### 5.1 FIFO
-
-Remove o bloco mais antigo inserido no conjunto.
-
-### 5.2 LRU
-
-Remove o bloco **menos recentemente utilizado**.
-
-### 5.3 LFU
-
-Remove o bloco **menos frequentemente acessado**. A seguir, descreve-se a lógica da função de simulação `simular_cache_LFU`:
-
-```python
-def simular_cache_LFU(padrao_acesso, cache_lines, associatividade, bloco_tamanho):
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe cache_simulator_GUI.py
 ```
 
-* `padrao_acesso`: lista de endereços simulados.
-* `cache_lines`: número total de linhas da cache.
-* `associatividade`: número de linhas por conjunto.
-* `bloco_tamanho`: quantidade de endereços por bloco.
+A interface usa CustomTkinter. A versão atual não depende de Dear PyGui. O Python precisa incluir Tkinter para a GUI; a automação usa backend Agg, sem abrir janelas.
 
-**Etapas da Simulação**:
+Execução completa:
 
-1. Calcula-se o número de conjuntos: `num_conjuntos = cache_lines // associatividade`
-2. Inicializa-se a cache: `cache = [{} for _ in range(num_conjuntos)]`
-3. Estatísticas: `hits`, `misses`, `hit_log`, `conjunto_log`
-4. Para cada endereço:
+```powershell
+.\.venv\Scripts\python.exe -B experimentos_completos.py --runs 100 --accesses 10000 --output Resultados_Automaticos/nova_execucao
+```
 
-   * Calcula-se `bloco = endereco // bloco_tamanho`
-   * Determina-se o `conjunto = bloco % num_conjuntos`
-   * Verifica-se HIT ou MISS
-   * Atualiza-se o contador ou substitui o bloco menos acessado
+A execução padrão tem 111 cenários × 100 repetições, mais 400 simulações LRU para classificação de misses. Os rastros sintéticos têm 10.000 referências; cada rastro FIR completo tem 65.824. Repita o mesmo comando para retomar os cenários concluídos. Configuração ou código diferente exige outra pasta. Cada cenário é salvo atomicamente após suas 100 repetições; uma interrupção no meio dele refaz somente esse cenário. Um marcador `conclusao.json` indica que gráficos e relatório foram concluídos.
 
-**Retorno**:
+Validação rápida e testes:
 
-* Lista de conjuntos acessados
-* Lista binária de HIT/MISS
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest test_cache_core -v
+.\.venv\Scripts\python.exe -B experimentos_completos.py --quick --output Resultados_Automaticos/teste_rapido
+.\.venv\Scripts\python.exe -B verificar_entrega.py --output Resultados_Automaticos/2026-11-14_estudo_completo
+```
 
-A política **LFU** mantém um contador para cada bloco e sempre remove o de menor valor.
+## Arquivos do código
 
-### 5.4 Random
+| Arquivo | Responsabilidade |
+|---|---|
+| `cache_core.py` | Cache, políticas e função compartilhada `simulacao_monte_carlo()` |
+| `cache_simulator_GUI.py` | Interface e diagramas; inclui LRFU |
+| `cache_visualizacao.py` | Agregação de mapas sem colisão por módulo e sem perder a janela parcial |
+| `experimentos_completos.py` | 111 cenários, rastros FIR, checkpoints, gráficos e estatística |
+| `relatorio_completo.py` | Relatório Markdown e HTML gerado dos dados reais |
+| `test_cache_core.py` | Modelo independente, endereçamento, RNG, FIR e classificação 3C |
+| `verificar_entrega.py` | Auditoria independente dos arquivos e estatísticas exportadas |
+| `automatizar_experimentos.py` | Automação histórica de três grupos, preservada |
 
-Seleciona um bloco aleatoriamente para substituição.
+## Desenho experimental
 
-## 6. Saída e Resultados
+O estudo separa três perguntas: variar linhas com bloco fixo; variar vias com linhas e capacidade fixas; variar bloco com linhas fixas. Também mantém o estudo de blocos com capacidade fixa, explicitando que o número de linhas muda nesse caso. Comparações de políticas compartilham a mesma sequência de referências por repetição. Carga e substituição aleatória usam geradores distintos.
 
-Ao final da simulação, são apresentados:
+A extensão LRFU usa frequência com envelhecimento exponencial, meia-vida padrão de 64 acessos globais. O trabalho não reivindica a invenção da família LRFU e mede também suas limitações. Os intervalos bootstrap pareados são exploratórios, sem correção por múltiplas comparações.
 
-* Taxa de acerto: `cache hits / total de acessos`
-* Quando múltiplas simulações são realizadas:
+No FIR, as duas versões calculam a mesma saída; muda apenas a ordem dos laços de amostra e canal. Leituras e escritas são referências de dados idealizadas. A classificação 3C usa cache sombra totalmente associativa LRU e deve ser entendida em relação a essa referência. O simulador mede taxa de acerto, não tempo de CPU ou desempenho real de hardware.
 
-  * Média e desvio padrão da taxa de acerto
-  * Média e variância de hits e misses
-
-Todos os resultados são exibidos diretamente na interface gráfica.
-
-## 7. Visualização Gráfica (opcional)
-
-A função `mapa_temporal_blocos` gera um **heatmap** com:
-
-* Blocos de memória no eixo vertical
-* Janelas temporais no eixo horizontal
-
-Essa visualização facilita a identificação de padrões e regiões de maior atividade ao longo do tempo.
-
-## 8. Requisitos
-
-* Python 3.x
-* Bibliotecas necessárias:
-
-  * `numpy`
-  * `matplotlib`
-  * `dearpygui`
-  * `collections`
-  * `random`
-  * `io`, `base64` (opcional)
-
-## 9. Aplicações Didáticas
-
-Este simulador pode ser utilizado em disciplinas como:
-
-* Organização e Arquitetura de Computadores
-* Sistemas Operacionais
-* Sistemas Embarcados
-* Simulação de Sistemas
-
-É uma ferramenta simples que pode ser usada para entender conceitos fundamentais de caches, localidade de acesso e impacto das políticas de substituição no desempenho.

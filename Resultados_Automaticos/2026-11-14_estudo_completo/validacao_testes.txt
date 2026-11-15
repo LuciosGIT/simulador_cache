@@ -1,0 +1,18 @@
+test_3c (test_cache_core.CoreTests.test_3c) ... ok
+test_address_fields (test_cache_core.CoreTests.test_address_fields) ... ok
+test_against_independent_reference (test_cache_core.CoreTests.test_against_independent_reference) ... ok
+test_cold_start_and_repeatability (test_cache_core.CoreTests.test_cold_start_and_repeatability) ... ok
+test_fifo_and_lru_differ (test_cache_core.CoreTests.test_fifo_and_lru_differ) ... ok
+test_fir_numerical_equivalence (test_cache_core.CoreTests.test_fir_numerical_equivalence) ... ok
+test_fir_trace_same_work (test_cache_core.CoreTests.test_fir_trace_same_work) ... ok
+test_heatmap_conserves_partial_window (test_cache_core.CoreTests.test_heatmap_conserves_partial_window) ... ok
+test_invalid_configurations (test_cache_core.CoreTests.test_invalid_configurations) ... ok
+test_lrfu_lambda_zero_equals_lfu (test_cache_core.CoreTests.test_lrfu_lambda_zero_equals_lfu) ... ok
+test_original_result_compatibility (test_cache_core.CoreTests.test_original_result_compatibility) ... ok
+test_same_trace_for_all_policies (test_cache_core.CoreTests.test_same_trace_for_all_policies) ... ok
+test_scenario_design (test_cache_core.CoreTests.test_scenario_design) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 4.641s
+
+OK
